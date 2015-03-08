@@ -76,11 +76,16 @@ function getWinner(playerMove,computerMove) {
 }
 
 function playToFive() {
-    console.log("Let's play Rock, Paper, Scissors");
+    return playToX(5);
+}
+
+function playToX(winningScore) {
+    winningScore = winningScore || 5;
+    console.log("Let's play Rock, Paper, Scissors. First to win " + winningScore + " times wins!");
     var playerWins = 0;
     var computerWins = 0;
 
-    while (playerWins < 5 && computerWins < 5) {
+    while (playerWins < winningScore && computerWins < winningScore) {
         var playerMove = getPlayerMove();
         var computerMove = getComputerMove();
         var victor = getWinner(playerMove,computerMove);
@@ -100,3 +105,4 @@ function playToFive() {
     }
     return [playerWins, computerWins];
 }
+
