@@ -70,7 +70,7 @@ function getWinner(playerMove,computerMove) {
             break;
         }
     } else {
-        winner = "There was a problem. Matt wins!"
+        winner = "That wasn't a valid move, you sneaky bugger. No one"
     }
     return winner;
 }
